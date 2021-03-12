@@ -1,0 +1,114 @@
+@font-face {
+    font-family: COB;
+    src: url("./font/couture-bld.otf");
+}
+@font-face {
+    font-family: COB_2;
+    src: url("./font/couture-bldit.otf");
+}
+@font-face {
+    font-family: GEL;
+    src: url("./font/GeosansLight.ttf");
+}
+@font-face {
+    font-family: GEL_2;
+    src: url("./font/GeosansLight-Oblique.ttf");
+}
+.body-register{
+    background-image: linear-gradient(to left, #447DF0 , #A92DFD);
+}
+.shit-form-register{
+    width: 600px;
+    background-color: white;
+    padding: 30px;
+    box-shadow: rgba(78, 78, 78, 0.5) 1px 1px 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.shit-form-register:after{
+    content: '';
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+
+.shit-form-register > p{
+    position: absolute;
+    z-index: 99;
+    color: white;
+    font-family: GEL;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-7%);
+}
+.err{
+    width: 100%;
+    font-family: IRANYekan;
+    background-color: #ff7979;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    padding: 6px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.group-input{
+    width: 100%;
+    margin-top: 20px;
+    height: 50px;
+}
+.group-input span{
+    font-family: IRANYekan;
+    line-height: 50px;
+    font-size: 12px;
+    color: #8a8a8a;
+}
+.name-input{
+    width: 182px;
+    padding: 5px 20px;
+    height: 38px;
+    margin: 0 28px;
+    text-align: center;
+    font-family: IRANYekan;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #efefef;
+}
+.all-input{
+    width: 427px;
+    padding: 5px 20px;
+    height: 38px;
+    margin: 0 0 0 8px;
+    text-align: center;
+    font-family: IRANYekan;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #efefef;
+}
+.btn-register{
+    margin-top: 30px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-family: COB;
+    padding: 0 20px;
+    background-color: #5f75ba;
+}
+.center-object{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
