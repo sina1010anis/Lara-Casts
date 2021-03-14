@@ -14,4 +14,8 @@ class channel extends Model
     {
         return $this->hasMany(thread::class);
     }
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

@@ -14,8 +14,13 @@
     font-family: GEL_2;
     src: url("./font/GeosansLight-Oblique.ttf");
 }
+a{
+    text-decoration: none;
+}
 .body-register{
     background-image: linear-gradient(to left, #447DF0 , #A92DFD);
+    padding: 0;
+    margin:0 ;
 }
 .shit-form-register{
     width: 600px;
@@ -111,4 +116,47 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.successful-msg{
+    width: 100%;
+    padding: 15px 0;
+    background-color: #3caf6b;
+    color: white;
+    font-family: GEL;
+    text-align: center;
+}
+.ListItem{
+    width: 100%;
+    height: 400px;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+.itemListItem{
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #cfcfcf;
+}
+.name-itemListItem{
+    float: right;
+    line-height: 80px;
+    font-family: IRANYekan;
+    margin-right:30px;
+    color: #A92DFD;
+}
+.click-itemListItem{
+    float: left;
+    margin-top: 23px;
+    border: 1px solid #467CF0;
+    font-family: IRANYekan;
+    font-size: 11px;
+    padding: 8px 20px;
+    margin-right:30px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #467CF0;
+    transition: 0.5s;
+}
+.click-itemListItem:hover{
+    background-color:#467CF0;
+    color: white;
 }

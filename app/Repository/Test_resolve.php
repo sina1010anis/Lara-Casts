@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Methods;
+namespace App\Repository;
 
 
 class Test_resolve
