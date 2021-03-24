@@ -22,8 +22,8 @@
             <div class="itemListItem">
                     <span class="name-itemListItem">
                         <?php
-                        $class = new \App\Repository\methodChannel();
-                        $class->editNameChannel($ListChannel->name);
+                            $class = new \App\Repository\methodChannel();
+                            $class->editNameChannel($ListChannel->name);
                         ?>
                     </span>
                     <a href="{{route('admin.editChannel' , ['id' => $ListChannel->slug])}}" class="click-itemListItem">

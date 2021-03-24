@@ -7,6 +7,17 @@
     <title>Laravel Cast</title>
 </head>
 <body>
-
+<div id="app">
+    <div id="row_app">
+        @if(session('msg'))
+            <div class="successful-msg">
+                {{session('msg')}}
+            </div>
+        @endif
+        @include('Front.Include.header')
+        @yield('indexPage')
+    </div>
+</div>
 </body>
+<script src="{{url('js/app.js')}}"></script>
 </html>

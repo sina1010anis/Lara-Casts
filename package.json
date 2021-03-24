@@ -10,9 +10,9 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "axios": "^0.21",
+        "axios": "^0.21.1",
         "bootstrap": "^5.0.0-beta2",
-        "jquery": "^3.2",
+        "jquery": "^3.6.0",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "popper.js": "^1.12",
@@ -22,8 +22,12 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.2",
         "@popperjs/core": "^2.9.1",
+        "jquery-ui": "^1.12.1",
         "scss": "^0.2.4",
-        "vue": "^3.0.7"
+        "vue": "^3.0.7",
+        "vue-range-component": "^1.0.3",
+        "vue-range-slider": "^0.6.0"
     }
 }

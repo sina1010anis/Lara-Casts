@@ -10,6 +10,6 @@ class view_channel
 {
     public function compose(\Illuminate\View\View $view)
     {
-        return $view->with('ListChannels' , channel::all());
+        return $view->with('ListChannels' , channel::orderBy('id' , 'DESC')->get());
     }
 }

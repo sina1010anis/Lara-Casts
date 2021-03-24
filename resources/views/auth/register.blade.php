@@ -5,6 +5,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
+    {!! htmlScriptTagJsApi() !!}
 </head>
 <body class="body-register">
 <div class="shit-form-register">
@@ -49,10 +50,21 @@
         @error('password_confirmation')
         <div class="err">{{$message}}</div>
         @enderror
+        {!! htmlFormSnippet() !!}
+        @error('g-recaptcha-response')
+        <div class="err">{{$message}}</div>
+        @enderror
         <div class="center-object">
             <button class="btn-register" type="submit">Register</button>
         </div>
     </form>
+    <hr>
+    <br>
+    <div class="center-object">
+        <a href="{{route('/google-login')}}">
+            <img class="img-google-logo" src="{{url('Data/Image/Index/Google-Logo.png')}}" alt="">
+        </a>
+    </div>
 </div>
 <script src="{{url('js/app.js')}}"></script>
 </body>

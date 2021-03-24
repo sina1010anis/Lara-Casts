@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\reply;
 use App\Repository\methodChannel;
 use App\Models\channel;
 use Illuminate\Http\Request;
@@ -16,7 +17,9 @@ class adminController extends Controller
     public function newChannelCreate(Request $request)
     {
         $v = $request->validate([
-            'name' => 'required|max:100'
+            'name' => 'required|max:100',
+            'body' => 'required',
+            'answer_my' => 'required',
         ]);
         resolve(methodChannel::class)->newChannel($request);
 
@@ -40,5 +43,12 @@ class adminController extends Controller
         ]);
         resolve(methodChannel::class)->updateChannel($id,$request);
         return redirect(route('admin.channel_list'))->with('msg' , 'Edit methodChannel Successful');
+    }
+
+    public function replyComment(Request $request)
+    {
+        resolve(methodChannel::class)->replyComment($request);
+        return redirect()->back()->with('msg' , 'Send Comment Successful');
+
     }
 }

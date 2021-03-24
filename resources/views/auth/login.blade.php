@@ -5,6 +5,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LogIn</title>
+    {!! htmlScriptTagJsApi() !!}
 </head>
 <body class="body-register">
 <div class="shit-form-register">
@@ -27,6 +28,7 @@
         @error('password')
         <div class="err">{{$message}}</div>
         @enderror
+
         <div class="center-object">
             <button class="btn-register" type="submit">Login</button>
         </div>
