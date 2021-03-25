@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Buy\Billing\Buy;
+use App\Buy\Billing\Paypal;
+use App\Buy\Billing\ZarinPal;
 use App\Mix\MethodsStr;
 use App\View\View;
 use Illuminate\Support\Facades\Schema;
@@ -28,8 +31,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->app->singleton(Buy::class,function (){
+            return new Paypal('Paypal v1.2');
+        });
         resolve(View::class)->View();
-        Str::mixin(new MethodsStr());
         Schema::defaultStringLength(191);
+        Str::mixin(new MethodsStr());
     }
 }

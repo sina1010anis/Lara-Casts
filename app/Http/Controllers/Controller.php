@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Buy\Billing\Buy;
+use App\Buy\Billing\Paypal;
+use App\Buy\Billing\ZarinPal;
+use App\Buy\Order\order;
 use App\Models\answer;
 use App\Models\channel;
 use App\QueryFilter\ChannelFilter;
@@ -14,14 +18,17 @@ use Illuminate\Http\Request;
 use Illuminate\Pipeline\Pipeline;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\news;
-
+use Illuminate\Support\Str;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function test()
+    public function test(Buy $paypal , order $order)
     {
-        return view('Front.test') ;
+//        $order->setDiscount(25000);
+//        return $paypal->price(55000);
+//        return Str::tagH1('test');
+//        return view('Front.test') ;
     }
     public function test2(Request $request)
     {

@@ -44,7 +44,7 @@ const app = createApp({
 
     mounted() {
         $(".icon-reply-comment-channel").click(()=>{
-            $(".form-reply-comment").stop().fadeToggle(100)
+            $(".form-reply-comment").stop().fadeIn(100)
             $(".blur-all-page").stop().fadeIn(200)
         })
         $(".icon-btn-menu-REPLY-index-page").click(()=>{
@@ -60,7 +60,7 @@ const app = createApp({
             $(".form-new-channel").stop().fadeToggle(100)
             $(".form-new-comment").stop().fadeToggle(100)
             $(".blur-all-page").stop().fadeOut(200)
-            $(".form-reply-comment").fadeOut(100)
+            $(".form-reply-comment").fadeOut(200)
 
 
         })

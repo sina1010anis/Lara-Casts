@@ -13,7 +13,7 @@ class ChannelFilter
         }
         $bind = $next($request);
         if (request()->menu == 'My Questions' ){
-            return $bind->where('username' , auth()->user()->name);
+            return $bind->where('user_id' , auth()->user()->id);
         }
         if (request()->menu == 'Popular This Week' ||request()->menu == 'Popular All Time'){
             return $bind->orderBy('view' , 'desc');

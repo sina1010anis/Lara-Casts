@@ -6,10 +6,17 @@ namespace App\Mix;
 
 class MethodsStr
 {
-    public function Test()
+    public function tagP()
     {
         return function ($text){
             return '<p>'.$text.'</p>';
+        };
+    }
+
+    public function tagH1()
+    {
+        return function ($text){
+            return '<h1>'.$text.'</h1>';
         };
     }
 }
